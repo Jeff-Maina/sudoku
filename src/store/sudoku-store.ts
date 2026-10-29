@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { generate, solve, type Board, DIFFICULTY, boardStringToGrid } from '../lib/sudoku';
+import { DIFFICULTY, boardStringToGrid, generate, solve, type Board } from '../lib/sudoku';
 
 type Difficulty = keyof typeof DIFFICULTY;
 
@@ -42,6 +42,7 @@ interface SudokuState {
   penaltyTime: number;
   hintsUsed: number;
   lastCompletedUnit: CompletedUnit | null;
+
   
   // Actions
   newGame: (difficulty: Difficulty) => void;

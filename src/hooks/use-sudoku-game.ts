@@ -9,7 +9,6 @@ export function useSudokuGame() {
     isNoteMode,
     elapsedTime,
     isComplete,
-    stats,
     selectCell,
     setCellValue,
     toggleNote,
@@ -18,6 +17,7 @@ export function useSudokuGame() {
     newGame,
     resetGame,
     updateElapsedTime,
+    
   } = useSudokuStore();
   
   // Timer effect
@@ -86,7 +86,6 @@ export function useSudokuGame() {
     isNoteMode,
     elapsedTime,
     isComplete,
-    stats,
     selectCell,
     setCellValue,
     toggleNote,
