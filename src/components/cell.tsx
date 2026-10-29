@@ -266,7 +266,7 @@ export const Cell = memo(function Cell({
   // distinct completion rather than on every render.
   useEffect(() => {
     if (isHero) {
-      playSound(success);
+      playSound(success as any);
     }
   }, [isHero, lastCompletedUnit?.id]);
 
@@ -275,7 +275,7 @@ export const Cell = memo(function Cell({
   // 1. Warning Sound (on conflict start)
   useEffect(() => {
     if (hasConflict && !prevConflictRef.current) {
-      playSound(warningSound);
+      playSound(warningSound as any);
     }
     prevConflictRef.current = hasConflict;
   }, [hasConflict]);
@@ -296,7 +296,7 @@ export const Cell = memo(function Cell({
       // 2. There is no conflict (invalid inputs get warning sound instead)
       // 3. The new value is not empty (clearing usually doesn't need a tap, or you can add one)
       if (!isGiven && !hasConflict && value !== '') {
-        playSound(tapSound);
+        playSound(tapSound as any);
       }
     }
     
